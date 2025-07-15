@@ -23,7 +23,7 @@ let suggestionsCollection; // we’ll set this to our 'suggestions' collection l
 async function connectToDB() {
   try {
     await client.connect(); // wait for the connection to finish
-    const db = client.db('witWebsite'); // use this name for our database (can name it anything)
+    const db = client.db('witWebsite'); // use this name for our database 
     suggestionsCollection = db.collection('suggestions'); // set the collection we’ll use
     console.log('Connected to MongoDB!');
   } catch (err) {
