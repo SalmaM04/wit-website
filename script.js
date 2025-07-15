@@ -1,4 +1,3 @@
-//  Theme Toggle 
 const themeButton = document.getElementById('theme-button');
 const toggleDarkMode = () => {
   document.body.classList.toggle('dark-mode');
@@ -16,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     : './img/Website (7).png';
 });
 
-//  RSVP Form Handling 
 const rsvpButton = document.getElementById('rsvp-button');
 let count = 3;
 let rotateFactor = 0;
@@ -87,7 +85,7 @@ const showModal = person => {
 };
 rsvpButton.addEventListener('click', validateForm);
 
-// Suggestion Box  
+// === Suggestion Box ===
 const suggestionForm = document.getElementById('suggestion-form');
 const feedback = document.getElementById('suggestion-feedback');
 const suggestionList = document.getElementById('suggestion-list');
@@ -99,7 +97,7 @@ suggestionForm.addEventListener('submit', async e => {
   const payload = { name, text: message };
 
   try {
-    const res = await fetch('http://localhost:3001/suggestions', {
+    const res = await fetch('https://suggestion-box-backend-wnjg.onrender.com/suggestions', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
@@ -125,9 +123,10 @@ function renderSuggestion({ name, text, _id }) {
   const deleteBtn = document.createElement('button');
   deleteBtn.textContent = '🗑️';
   deleteBtn.classList.add('delete-btn');
+
   deleteBtn.addEventListener('click', async () => {
     try {
-      const res = await fetch(`http://localhost:3001/suggestions/${_id}`, {
+      const res = await fetch(`https://suggestion-box-backend-wnjg.onrender.com/suggestions/${_id}`, {
         method: 'DELETE'
       });
       if (res.ok) {
@@ -147,7 +146,7 @@ function renderSuggestion({ name, text, _id }) {
 
 async function loadSuggestions() {
   try {
-    const res = await fetch('http://localhost:3001/suggestions');
+    const res = await fetch('https://suggestion-box-backend-wnjg.onrender.com/suggestions');
     if (!res.ok) throw new Error('Network response was not OK');
     const suggestions = await res.json();
 
