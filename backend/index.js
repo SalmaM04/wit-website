@@ -32,7 +32,13 @@ async function connectToDB() {
 }
 
 // step 6: run the function above to actually connect!
-connectToDB();
+connectToDB().then(() => {
+  if (!suggestionsCollection) {
+    console.error("suggestionsCollection is still undefined! Check MongoDB connection or DB/collection name.");
+  } else {
+    console.log("MongoDB collection successfully loaded.");
+  }
+});
 
 // step 7: this route is just to test if our backend is alive and running
 app.get('/', (req, res) => {
