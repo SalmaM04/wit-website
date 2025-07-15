@@ -1,0 +1,475 @@
+/*** You will not need this file until Unit 3 ***/
+
+/*** VSCodeEDU preview fix 
+   Purpose:
+   - Fix VSCodeEDU issue that causes a white border to show around
+     the preview window
+   When To Modify:
+   - If you change the background color of your webpage, you may need to update this rule too.
+***/
+html {
+  background-color: var(--bg-color);
+  scroll-behavior: smooth;
+}
+
+/*** body ***
+Purpose:
+- Add style rules for the body of your webpage
+When To Modify:
+- [ ] Project 3 (REQUIRED FEATURE) 
+- [ ] Any time after
+***/
+body {
+  background-color: var(--bg-color); /* see bottom for variables */
+  font-size: 16px;
+  color: var(--text-color);
+  font-family: Tahoma, sans-serif;
+  margin: 20px;
+  padding-bottom: 80px; /* Prevent content from being hidden behind footer */
+}
+
+/*** Text ***
+Purpose: 
+- Add style rules for headings (h1-6), paragraphs (p), links (a), and buttons
+When To Modify:
+- [X] Project 3 (REQUIRED FEATURE) 
+- [ ] Any time after
+***/
+h3, h4 {
+  font-family: Georgia;
+  color: #BE5985;
+}
+
+p {
+  background-color: #FFB8E0;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+ul {
+  background-color: #FFB8E0;
+  padding: 15px;
+  border-radius: 5px;
+  list-style-position: inside;
+}
+
+a, a * {
+  text-decoration: none;
+  background-color: #FFEDFA;
+  font-family: Arial, sans-serif;
+  display: block;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+a:link   { background-color: #EC7FA9; margin-bottom: 20px; }
+a:visited{ background-color: #BE5985; }
+a:hover  { background-color: #FFEDFA; transform: scale(1.02); transition: 0.2s; }
+a:active { background-color: #FFB8E0; }
+
+a article h3 { font-size: 20px; font-weight: bold; color: #BE5985; }
+a article p  { font-size: 16px; color: #BE5985; line-height: 1.4; }
+
+/*** header ***
+Purpose:
+- Add style rules for your website's header section
+When To Modify:
+- [X] Project 3 (REQUIRED FEATURE) 
+- [ ] Any time after
+***/
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+#header-img {
+  width: 95%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+h1 {
+  margin: 20px;
+  background-color: #FFB8E0;
+  font-family: Georgia;
+  font-size: 50px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+h2 {
+  margin-top: 30px;
+  font-family: Georgia;
+  font-size: 25px;
+  color: #BE5985;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.header-item:nth-of-type(1) { flex:1; }
+.header-item:nth-of-type(2) { flex:2; text-align:center; }
+.header-item:nth-of-type(3) { flex:1; text-align:right; }
+
+.header-button {
+  background-color: #EC7FA9;
+  color: white;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.header-button:hover {
+  background-color: #BE5985;
+}
+
+/*** Navbar ***
+***/
+.navbar {
+  background-color: #FFB8E0;
+  width: 100%;
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 1000;
+  padding: 5px 0;
+}
+.navbar ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0; padding: 0;
+  list-style: none;
+}
+.navbar ul li {
+  margin: 0 10px;
+}
+.navbar ul li a {
+  align-items: center;
+  background-color: #EC7FA9;
+  color: white;
+  font-family: Georgia;
+  padding: 8px 15px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.navbar ul li a:hover {
+  background-color: #BE5985;
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+/*** Resources Section ***/
+#resources {
+  margin-top: 40px;
+  font-size: 30px;
+  color: #BE5985;
+  text-align: center;
+  font-family: Georgia, serif;
+}
+a.block {
+  display: block;
+  margin: 20px auto;
+  width: 80%;
+  background-color: #FFEDFA;
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #BE5985;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+a.block:hover {
+  background-color: #FFB8E0;
+  transform: scale(1.02);
+}
+a article h3 { font-size: 24px; color: #BE5985; font-weight: bold; }
+a article p  { font-size: 16px; color: #BE5985; line-height: 1.4; }
+
+/*** RSVP Section ***/
+.rsvp-container {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 50px;
+}
+.rsvp-para { width: 55%; padding-right: 10px; }
+.rsvp-participants {
+  width: 45%;
+  background-color: #FFB8E0;
+  padding: 15px;
+  border-radius: 5px;
+}
+.rsvp-participants p {
+  background-color: transparent;
+  padding: 5px 0;
+  margin: 5px 0;
+}
+.form-container {
+  background-color: #FFB8E0;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+.form-group { margin-bottom: 15px; }
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: white;
+}
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+#rsvp-button {
+  background-color: #EC7FA9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Georgia;
+  font-size: 16px;
+  margin-top: 10px;
+}
+#rsvp-button:hover {
+  background-color: #BE5985;
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+#rsvp-count {
+  font-weight: bold;
+  text-align: center;
+  background-color: #EC7FA9;
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.error {
+  border: 2px solid var(--error-color-border);
+  background-color: var(--error-color);
+}
+
+/*** Suggestion Box Styles (matching RSVP design) ***/
+#suggestion-box {
+  margin: 40px 0;
+}
+
+#suggestion-box h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-family: Georgia;
+  font-size: 25px;
+  color: #BE5985;
+}
+
+#suggestion-box p {
+  background-color: #FFB8E0;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.suggestion-form-container {
+  background-color: #FFB8E0;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.suggestion-form-group {
+  margin-bottom: 15px;
+}
+
+.suggestion-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+#suggestion-form input[type="text"],
+#suggestion-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+#suggestion-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+#suggestion-form button {
+  background-color: #EC7FA9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Georgia;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#suggestion-form button:hover {
+  background-color: #BE5985;
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+#suggestion-feedback {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #FFB8E0;
+  border-radius: 5px;
+  color: #BE5985;
+  font-weight: bold;
+  display: none;
+}
+
+#suggestion-feedback.show {
+  display: block;
+}
+/*** FOOTER ***/
+/* shrink it slightly and left-align buttons */
+footer {
+  position: fixed;
+  bottom: 0; left: 0;
+  width: 100%;
+  background-color: #FFB8E0;
+  padding: 8px 10px;       /* slightly slimmer */
+  display: flex;
+  align-items: center;     /* vertical centering */
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;     /* vertical centering */
+  justify-content: flex-start; /* back to left-aligned */
+  gap: 10px;
+}
+
+.footer-btn {
+  background-color: #EC7FA9;
+  color: white;
+  font-family: Georgia, serif;
+  padding: 8px 16px;       /* slightly smaller */
+  border-radius: 5px;
+  font-size: 14px;         /* slightly smaller */
+  text-decoration: none;
+  transition: 0.2s;
+}
+.footer-btn:hover {
+  background-color: #BE5985;
+  transform: scale(1.05);
+}
+/*** Dark Mode Styles ***/
+.dark-mode {
+  background-color: var(--bg-color-dark-mode);
+  color: var(--text-color-dark-mode);
+}
+.dark-mode h1 { background-color: #994A6C; }
+.dark-mode h2, .dark-mode h3, .dark-mode h4 { color: #FFE0F5; }
+.dark-mode p, .dark-mode ul, .dark-mode .form-container,
+.dark-mode .rsvp-participants, .dark-mode .suggestion-form-container {
+  background-color: #BE5985;
+  color: white;
+}
+.dark-mode a, .dark-mode a * {
+  background-color: #BE5985;
+  color: white;
+}
+.dark-mode a:link   { background-color: #EC7FA9; }
+.dark-mode a:visited{ background-color: #994A6C; }
+.dark-mode a:hover  { background-color: #FFB8E0; color: #7A3B56; }
+.dark-mode a:active { background-color: #FFEDFA; color: #7A3B56; }
+.dark-mode .navbar { background-color: #994A6C; }
+.dark-mode .navbar ul li a { background-color: #7A3B56; }
+.dark-mode .navbar ul li a:hover { background-color: #EC7FA9; }
+.dark-mode footer { background-color: #994A6C; }
+.dark-mode .footer-btn:hover { background-color: #EC7FA9; }
+.dark-mode #suggestion-feedback { background-color: #BE5985; color: white; }
+
+/*** Theme Button ***
+***/
+#theme-button {
+  background-color: #EC7FA9;
+  color: white;
+  font-family: Georgia;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+#theme-button:hover { background-color: #BE5985; transform: scale(1.05); }
+
+/*** Success Modal ***
+***/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.modal-container {
+  background-color: #FFB8E0;
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: Georgia, serif;
+  padding: 50px;
+  width: 55%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.modal-item { padding: 10px; }
+#modal-text { font-size: 24px; background-color: transparent; }
+#modal-image { width: 150px; height: auto; transition: transform 0.5s ease; }
+.dark-mode .modal-container { background-color: #BE5985; }
+
+/*** Custom Colors (OPTIONAL) ***
+***/
+:root {
+  --bg-color: #FFEDFA;
+  --text-color: #ffffff;
+  --bg-color-dark-mode: #BE5985;
+  --text-color-dark-mode: #fff;
+  --accent-color-lightest: #FFEDFA;
+  --accent-color-light: #FFB8E0;
+  --accent-color-medium: #EC7FA9;
+  --accent-color-dark: #BE5985;
+  --accent-color-darkest: #7A3B56;
+  --accent-color-highlight: #FF9AC7;
+  --error-color: #FFB8E0;
+  --error-color-border: #BE5985;
+}
+

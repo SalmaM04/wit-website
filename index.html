@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- head 
+       Purpose:
+       – Title shows up in the browser tab
+       – Favicon link
+       – Link to CSS
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>💻 Women+ In Tech</title>
+  <link rel="icon" href="./img/WIT.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#links">Links</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button id="theme-button">Toggle Dark Mode</button></li>
+    </ul>
+  </div>
+
+  <!-- Header -->
+  <div class="header-container">
+    <div class="header-item">
+      <img id="header-img" src="./img/Website (7).png" alt="Club Logo" />
+    </div>
+    <div class="header-item">
+      <h1>Women+ In Tech Club</h1>
+      <h2>Empower. Connect. Thrive in Tech!</h2>
+    </div>
+    <div class="header-item">
+      <button class="header-button">About</button>
+      <button class="header-button">Join Now!</button>
+    </div>
+  </div>
+
+  <!-- About -->
+  <h2 id="about">Club Mission & Vision</h2>
+  <p>
+    Women+ In Tech @ Chabot College is a student-led organization dedicated to
+    empowering women in technology. Through networking, mentorship,
+    workshops, and career resources, we foster an inclusive community for
+    learning and growth. Join us to bridge the gender gap and thrive in tech!
+  </p>
+  <h3>March 2025</h3>
+  <ul>
+    <li><b>March 5th:</b> <i>Starting project</i></li>
+    <li><b>March 15th:</b> <i>Women In Engineering Conference</i></li>
+    <li><b>Bullet 3:</b> <i>Description</i></li>
+  </ul>
+
+  <!-- Events -->
+  <h2 id="events">Upcoming Events</h2>
+  <img src="./img/programmer.jpg" width="350" alt="" />
+  <h3>March 6th – Starting project</h3>
+  <p>We will begin working on our personal projects!</p>
+  <img src="./img/WIEConferenceimage.png" width="500" alt="" />
+  <h3>March 15th – 2025 Silicon Valley Women in Engineering Conference</h3>
+  <p>
+    The 2025 Silicon Valley Women in Engineering (WiE) Conference aims to
+    inspire the next generation of women in engineering and technology. The
+    conference will offer opportunities for learning, networking, and
+    career development.
+  </p>
+  <img src="./img/ChabotCollege.png" width="400" alt="" />
+  <h3>More events coming soon…</h3>
+  <p>Join our socials to stay up to date on upcoming events!</p>
+
+  <!-- RSVP Section -->
+  <div id="rsvp">
+    <h2>RSVP</h2>
+    <p id="rsvp-count">⭐ 3 people have RSVP'd to this event!</p>
+
+    <div class="rsvp-container">
+      <div class="rsvp-para">
+        <p>
+          Want to join our upcoming Women+ In Tech events? RSVP below to secure
+          your spot! Join our community of amazing women in tech and stay
+          connected with like-minded individuals passionate about technology.
+        </p>
+      </div>
+      <div class="rsvp-participants">
+        <p>🎟️ Salma has RSVP'd to Women In Engineering Conference.</p>
+        <p>🎟️ Anton has RSVP'd to Starting project.</p>
+        <p>🎟️ Jess has RSVP'd to Women In Engineering Conference.</p>
+      </div>
+    </div>
+
+    <div class="form-container">
+      <form id="rsvp-form">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input id="name" name="name" type="text" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+        <div class="form-group">
+          <label for="event">Event:</label>
+          <input
+            id="event"
+            name="event"
+            type="text"
+            placeholder="Which event?"
+            required
+          />
+        </div>
+      </form>
+      <button id="rsvp-button">Submit RSVP</button>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div id="success-modal" class="modal">
+    <div class="modal-container">
+      <div class="modal-item">
+        <p id="modal-text">Thanks for your RSVP!</p>
+      </div>
+      <div class="modal-item">
+        <img id="modal-image" src="./img/WIT.png" alt="Thank you" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Links -->
+  <h2 id="links">Links</h2>
+  <a class="block" href="https://discord.gg/TVQcQAg2w9">
+    <article>
+      <h3>Join our Discord 📱</h3>
+      <p>
+        Join our Discord community to connect with fellow women in tech, share
+        resources, and stay updated on events!
+      </p>
+    </article>
+  </a>
+  <a class="block" href="https://www.codepath.org">
+    <article>
+      <h3>Connect with us on LinkedIn 💼</h3>
+      <p>
+        Connect with us on LinkedIn to expand your network, stay informed about
+        industry opportunities, and celebrate women in tech!
+      </p>
+    </article>
+  </a>
+
+  <!-- Resources -->
+  <h2 id="resources">Resources for Women in Tech</h2>
+  <a
+    class="block"
+    href="https://bold.org/scholarships/by-demographics/women/women-stem-scholarships/"
+    target="_blank"
+  >
+    <article>
+      <h3>Scholarships for Women in Tech 🎓</h3>
+      <p>
+        Explore various scholarship opportunities for women in the tech
+        industry and help fund your educational journey!
+      </p>
+    </article>
+  </a>
+  <a class="block" href="https://www.freecodecamp.org/" target="_blank">
+    <article>
+      <h3>FreeCodeCamp – Learn to Code 💻</h3>
+      <p>
+        Access a wealth of free coding tutorials, certifications, and projects
+        to build your skills in web development, data science, and more!
+      </p>
+    </article>
+  </a>
+  <a class="block" href="https://www.techcareers.com" target="_blank">
+    <article>
+      <h3>Tech Careers & Internships 🌐</h3>
+      <p>
+        Find job opportunities, internships, and freelance work tailored to
+        those entering or progressing in the tech industry!
+      </p>
+    </article>
+  </a>
+  <a
+    class="block"
+    href="https://codeop.tech/top-10-tech-podcasts-by-women-in-2024/"
+    target="_blank"
+  >
+    <article>
+      <h3>Tech Podcasts for Women 🎧</h3>
+      <p>
+        Listen to insightful podcasts on the latest tech trends, women in STEM,
+        and success stories from women leaders in the tech world.
+      </p>
+    </article>
+  </a>
+  <a class="block" href="https://www.womenwhocode.com/" target="_blank">
+    <article>
+      <h3>Women Who Code Community 👩‍💻</h3>
+      <p>
+        Join a global network of women in tech, and participate in events,
+        learning, and job opportunities!
+      </p>
+    </article>
+  </a>
+
+  <!-- Suggestion Box -->
+  <section id="suggestion-box">
+    <h2>💡 Suggestion Box</h2>
+    <p>
+      Have ideas for improving our Women+ In Tech club? We'd love to hear your
+      suggestions for events, activities, or anything that could make our
+      community even better!
+    </p>
+    <div class="suggestion-form-container">
+      <form id="suggestion-form">
+        <div class="suggestion-form-group">
+          <label for="suggestion-name">Name:</label>
+          <input
+            id="suggestion-name"
+            name="suggestion-name"
+            type="text"
+            placeholder="Your name"
+            required
+          />
+        </div>
+        <div class="suggestion-form-group">
+          <label for="suggestion-message">Your Suggestion:</label>
+          <textarea
+            id="suggestion-message"
+            name="suggestion-message"
+            placeholder="Share your ideas with us..."
+            required
+          ></textarea>
+        </div>
+        <button type="submit">Send Suggestion</button>
+      </form>
+    </div>
+
+    <div id="suggestion-feedback"></div>
+
+    <!-- NEW: list container for all suggestions -->
+    <ul id="suggestion-list">
+      <li id="loading-msg">Loading suggestions...</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-content">
+      <a href="https://www.codepath.org/" class="footer-btn">Learn More</a>
+      <a href="https://www.codepath.org/" class="footer-btn">Email Our Team</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
