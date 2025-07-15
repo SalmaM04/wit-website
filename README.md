@@ -35,7 +35,7 @@ This is the official website for the Women+ in Tech (WIT) Club at Chabot College
 ---
 
 ## Folder Structure
-
+```
 wit-website/
 ├── backend/          
 │   ├── index.js            
@@ -44,7 +44,7 @@ wit-website/
 │   ├── index.html       
 │   ├── script.js      
 │   └── styles.css          
-
+```
 ---
 
 ## Acknowledgments
