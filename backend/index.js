@@ -11,7 +11,7 @@ const PORT = 3001;
 
 // step 3: this middleware lets us read JSON coming from the frontend form
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://zesty-cassata-96d7d7.netlify.app']
+  origin: ['http://localhost:3000', 'https://wit-club-chabotcollege.netlify.app']
 }));
 app.use(express.json());
 
