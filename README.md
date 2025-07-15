@@ -34,15 +34,16 @@ This is the official website for the Women+ in Tech (WIT) Club at Chabot College
 
 ---
 
-## 📂Folder Structure
-/
-├── backend/ # Node.js + Express API
-│ └── index.js
-├── .env # MongoDB connection (not committed)
-├── public/ # Frontend files
-│ ├── index.html
-│ ├── script.js
-│ └── styles.css
+## Folder Structure
+
+wit-website/
+├── backend/          
+│   ├── index.js            
+│   └── .env (not committed)         
+├── public/          
+│   ├── index.html       
+│   ├── script.js      
+│   └── styles.css          
 
 ---
 
